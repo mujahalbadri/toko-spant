@@ -1,0 +1,11 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.letter-spacing {
+  letter-spacing: 0.1em;
+}
+
+.pilih-brand img {
+  max-height: 80px;
+}
