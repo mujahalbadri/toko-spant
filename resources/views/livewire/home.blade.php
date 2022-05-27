@@ -38,7 +38,9 @@
 				<a href="">
 					<div class="">
 						<div class="my-3 text-center">
-							<img src="{{ asset('img/brand/'.$brand->image) }}" alt="Brand Image" class="img-fluid">
+							<figure>
+								<img src="{{ asset('img/brand/'.$brand->image) }}" alt="Brand Image" class="img-fluid">
+							</figure>
 						</div>
 					</div>
 				</a>
@@ -51,7 +53,7 @@
 	{{-- Best Product Section --}}
 	<section class="product mt-5 mb-5">
 		<h3 class="fw-bold">Best Products
-			<a href="" class="btn btn-dark float-end"><i class="fas fa-eye mr-3"></i><span> Lihat
+			<a href="{{ route('products') }}" class="btn btn-dark float-end"><i class="fas fa-eye mr-3"></i><span> Lihat
 					Semua</span></a>
 		</h3>
 		<div class="row mt-4">
@@ -63,7 +65,7 @@
 						<div class="row mt-2">
 							<div class="col-md-12">
 								<h5 class="fw-bold text-truncate">{{ $product->name }}</h5>
-								<h5 class="fs-6">Rp. {{ number_format($product->price) }}</h5>
+								<h5 class="fs-5 text-truncate">Rp. {{ number_format($product->price) }}</h5>
 							</div>
 						</div>
 						<div class="row mt-2">

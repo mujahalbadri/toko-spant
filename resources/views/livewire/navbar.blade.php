@@ -14,6 +14,21 @@
 				<li class="nav-item">
 					<a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
 				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						List Sepatu
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						@foreach ($brands as $brand)
+						<li><a class="dropdown-item" href="">{{ $brand->name }}</a></li>
+						@endforeach
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="{{ route('products') }}">Semua Brand</a></li>
+					</ul>
+				</li>
 			</ul>
 
 			<!-- Right Side Of Navbar -->
@@ -33,21 +48,19 @@
 				@endif
 				@else
 				<li class="nav-item dropdown">
-					<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false" v-pre>
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
 						{{ Auth::user()->name }}
 					</a>
-
-					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
 							{{ __('Logout') }}
 						</a>
-
 						<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
 							@csrf
 						</form>
-					</div>
+					</ul>
 				</li>
 				@endguest
 			</ul>
