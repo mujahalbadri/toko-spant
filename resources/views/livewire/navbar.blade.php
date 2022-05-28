@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 	<div class="container">
-		<a class="navbar-brand text-uppercase fw-bold letter-spacing" href="{{ url('/') }}">
+		<a class="navbar-brand text-uppercase font-weight-bold letter-spacing" href="{{ url('/') }}">
 			{{ config('app.name', 'Spant') }}
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -8,26 +8,26 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
 			<!-- Left Side Of Navbar -->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+					<a class="nav-link" href="{{ url('/') }}">{{ __('Home') }}</a>
 				</li>
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false">
 						List Sepatu
 					</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"">
 						@foreach ($brands as $brand)
-						<li><a class="dropdown-item" href="">{{ $brand->name }}</a></li>
+						<a class=" dropdown-item" href="{{ route('products.brand', $brand->id) }}">{{ $brand->name }}</a>
 						@endforeach
-						<li>
-							<hr class="dropdown-divider">
-						</li>
-						<li><a class="dropdown-item" href="{{ route('products') }}">Semua Brand</a></li>
-					</ul>
+
+						<hr class="dropdown-divider">
+
+						<a class="dropdown-item" href="{{ route('products') }}">Semua Brand</a>
+					</div>
 				</li>
 			</ul>
 
@@ -48,19 +48,21 @@
 				@endif
 				@else
 				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-						aria-expanded="false">
+					<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false" v-pre>
 						{{ Auth::user()->name }}
 					</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
+																							 document.getElementById('logout-form').submit();">
 							{{ __('Logout') }}
 						</a>
+
 						<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
 							@csrf
 						</form>
-					</ul>
+					</div>
 				</li>
 				@endguest
 			</ul>
