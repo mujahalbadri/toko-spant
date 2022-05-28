@@ -74,7 +74,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td>Ukuran Sepatu</td>
+								<td>Size Sepatu</td>
 								<td>:</td>
 								<td>
 									<input id="size" type="number" class="form-control @error('size') is-invalid @enderror"

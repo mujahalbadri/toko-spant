@@ -14,13 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 Route::livewire('/', 'home')->name('home');
 Route::livewire('/products', 'product-index')->name('products');
 Route::livewire('/products/brand/{brandId}', 'product-brand')->name('products.brand');
 Route::livewire('/products/{id}', 'product-detail')->name('products.detail');
+Route::livewire('/keranjang', 'keranjang')->name('keranjang');

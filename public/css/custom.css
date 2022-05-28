@@ -7,7 +7,7 @@ body {
 }
 
 .footer {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
 }
 
@@ -25,4 +25,10 @@ body {
 
 .product .card {
   border-radius: 10px;
+}
+
+.detail-product {
+  background-color: #f1f1f1;
+  border-width: 0;
+  border-radius: 20px;
 }
