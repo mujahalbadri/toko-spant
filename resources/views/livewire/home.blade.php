@@ -57,7 +57,7 @@
 			<div class="col-6 col-md-3">
 				<div class="card mb-3">
 					<div class="card-body text-center">
-						<img src="{{ asset('img/product/'.$product->image) }}" alt="Best product imag" class="img-fluid w-100">
+						<img src="{{ asset('img/product/'.$product->image) }}" alt="Best product image" class="img-fluid w-100">
 						<div class="row mt-2">
 							<div class="col-md-12">
 								<h5 class="font-weight-bold text-truncate">{{ $product->name }}</h5>
@@ -66,7 +66,7 @@
 						</div>
 						<div class="row mt-2">
 							<div class="col-md-12">
-								<a href="" class="btn btn-dark btn-block">Detail</a>
+								<a href="{{ route('products.detail', $product->id) }}" class="btn btn-dark btn-block">Detail</a>
 							</div>
 						</div>
 					</div>

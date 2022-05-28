@@ -1,5 +1,14 @@
+html {
+  position: relative;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
 }
 
 .letter-spacing {
@@ -8,4 +17,12 @@ body {
 
 .pilih-brand img {
   max-height: 80px;
+}
+
+.pilih-brand .card {
+  border-radius: 15px;
+}
+
+.product .card {
+  border-radius: 10px;
 }

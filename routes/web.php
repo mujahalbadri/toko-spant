@@ -23,6 +23,4 @@ Auth::routes();
 Route::livewire('/', 'home')->name('home');
 Route::livewire('/products', 'product-index')->name('products');
 Route::livewire('/products/brand/{brandId}', 'product-brand')->name('products.brand');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::livewire('/products/{id}', 'product-detail')->name('products.detail');

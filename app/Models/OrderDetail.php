@@ -9,6 +9,14 @@ class OrderDetail extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'quantity',
+        'total_price',
+        'size',
+        'product_id',
+        'order_id',
+    ];
+
     public function product()
     {
         return $this->belongsTo(Product::class, 'product_id', 'id');

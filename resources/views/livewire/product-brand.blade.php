@@ -3,9 +3,9 @@
 		<div class="col">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="{{ url('/') }}" class="text-dark">Home</a></li>
-					<li class="breadcrumb-item active" aria-current="page">List Sepatu</li>
-					<li class="breadcrumb-item active" aria-current="page">{{ $brand->name }}</li>
+					<li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-dark">Home</a></li>
+					<li class="breadcrumb-item active font-weight-bold" aria-current="page">List Sepatu</li>
+					<li class="breadcrumb-item active font-weight-bold" aria-current="page">{{ $brand->name }}</li>
 				</ol>
 			</nav>
 		</div>
@@ -43,7 +43,7 @@
 						</div>
 						<div class="row mt-2">
 							<div class="col-md-12">
-								<a href="" class="btn btn-dark btn-block">Detail</a>
+								<a href="{{ route('products.detail', $product->id) }}" class="btn btn-dark btn-block">Detail</a>
 							</div>
 						</div>
 					</div>
