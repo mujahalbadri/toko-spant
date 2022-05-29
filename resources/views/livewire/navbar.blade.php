@@ -29,6 +29,11 @@
 						<a class="dropdown-item" href="{{ route('products') }}">Semua Brand</a>
 					</div>
 				</li>
+				@if (Auth::check() && Auth::user()->is_admin == 1)
+				<li class="nav-item">
+					<a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Dashboard') }}</a>
+				</li>
+				@endif
 			</ul>
 
 			<!-- Right Side Of Navbar -->

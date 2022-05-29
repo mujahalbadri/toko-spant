@@ -23,3 +23,5 @@ Route::livewire('/products/{id}', 'product-detail')->name('products.detail');
 Route::livewire('/keranjang', 'keranjang')->name('keranjang');
 Route::livewire('/checkout', 'checkout')->name('checkout');
 Route::livewire('/history', 'history')->name('history');
+
+Route::livewire('/admin/dashboard', 'admin.dashboard')->layout('layouts.admin.admin-app')->name('admin.dashboard')->middleware('is_admin');
