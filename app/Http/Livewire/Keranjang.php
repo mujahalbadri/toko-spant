@@ -11,10 +11,16 @@ class Keranjang extends Component
 {
     protected $order;
     protected $order_details = [];
+    public $destroyId = '';
 
-    public function destroy($id)
+    public function destroyId($id)
     {
-        $order_detail = OrderDetail::find($id);
+        $this->destroyId = $id;
+    }
+
+    public function destroy()
+    {
+        $order_detail = OrderDetail::find($this->destroyId);
         if (!empty($order_detail)) {
             $order = Order::where('id', $order_detail->order_id)->first();
             $total_order_detail = OrderDetail::where('order_id', $order->id)->count();

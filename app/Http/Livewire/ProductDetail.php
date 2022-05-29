@@ -67,7 +67,7 @@ class ProductDetail extends Component
 
         $this->emit('masukKeranjang');
 
-        session()->flash('message', 'Sukses Masuk Keranjang');
+        session()->flash('message', 'Berhasil Masuk Keranjang');
 
         return redirect()->back();
     }
