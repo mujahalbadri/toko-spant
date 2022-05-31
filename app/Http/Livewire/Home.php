@@ -11,7 +11,7 @@ class Home extends Component
     public function render()
     {
         return view('livewire.home', [
-            'brands' => Brand::all(),
+            'brands' => Brand::take(4)->get(),
             'products' => Product::take(4)->get()
         ]);
     }

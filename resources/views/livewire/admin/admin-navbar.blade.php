@@ -15,7 +15,10 @@
           <a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Dashboard') }}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('home') }}">{{ __('Guest Home') }}</a>
+          <a class="nav-link" href="{{ route('admin.brand') }}">{{ __('Brand') }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('admin.product') }}">{{ __('Product') }}</a>
         </li>
       </ul>
 
@@ -35,6 +38,9 @@
         </li>
         @endif
         @else
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('home') }}">{{ __('Guest Home') }}</a>
+        </li>
         <li class="nav-item dropdown">
           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false" v-pre>

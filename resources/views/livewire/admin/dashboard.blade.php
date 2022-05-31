@@ -4,7 +4,7 @@
 			<div class="card">
 				<div class="card-header">Dashboard</div>
 				<div class="card-body">
-					You are Admin.
+					Selamat datang, Admin.
 				</div>
 			</div>
 		</div>

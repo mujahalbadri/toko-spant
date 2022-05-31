@@ -32,3 +32,5 @@ body {
   border-width: 0;
   border-radius: 20px;
 }
+
+.custom-file-label.selected::after { content: "" !important; }
