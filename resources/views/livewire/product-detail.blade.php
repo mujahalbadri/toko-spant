@@ -28,7 +28,7 @@
 		<div class="col-md-6">
 			<div class="card detail-product">
 				<div class="card-body">
-					<img src="{{ asset('storage/'.$product->image) }}" alt="Product image" class="img-fluid w-100">
+					<img src="{{ asset('img/product/'.$product->image) }}" alt="Product image" class="img-fluid w-100">
 				</div>
 			</div>
 		</div>
@@ -51,7 +51,7 @@
 								<td>Brand</td>
 								<td>:</td>
 								<td>
-									<img src="{{ asset('storage/'.$product->brand->image) }}" alt="Brand image" class="img-fluid"
+									<img src="{{ asset('img/brand/'.$product->brand->image) }}" alt="Brand image" class="img-fluid"
 										width="50">
 								</td>
 							</tr>

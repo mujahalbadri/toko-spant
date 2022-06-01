@@ -35,7 +35,7 @@
 					<div class="">
 						<div class="my-3 text-center">
 							<figure>
-								<img src="{{ asset('storage/'.$brand->image) }}" alt="Brand Image" class="img-fluid">
+								<img src="{{ asset('img/brand/'.$brand->image) }}" alt="Brand Image" class="img-fluid">
 							</figure>
 						</div>
 					</div>
@@ -61,7 +61,7 @@
 			<div class="col-6 col-md-3">
 				<div class="card mb-3">
 					<div class="card-body text-center">
-						<img src="{{ asset('storage/'.$product->image) }}" alt="Best product image" class="img-fluid w-100">
+						<img src="{{ asset('img/product/'.$product->image) }}" alt="Best product image" class="img-fluid w-100">
 						<div class="row mt-2">
 							<div class="col-md-12">
 								<h5 class="font-weight-bold text-truncate">{{ $product->name }}</h5>

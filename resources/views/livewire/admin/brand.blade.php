@@ -34,7 +34,7 @@
 								<tr>
 									<td>{{ $loop->iteration }}</td>
 									<td>{{ $brand->name }}</td>
-									<td><img src="{{ asset('storage/'.$brand->image) }}" alt="Brand image" class="img-fluid" width="80">
+									<td><img src="{{ asset('img/brand/'.$brand->image) }}" alt="Brand image" class="img-fluid" width="80">
 									</td>
 									<td><button wire:click="edit({{ $brand->id }})" type="button" class="btn btn-success mr-1 mb-1"
 											data-toggle="modal" data-target="#formModal"><i class="fas fa-edit mr-1"></i>
@@ -92,7 +92,7 @@
 							</div>
 							@if ($showEditModal)
 							<div class="my-3">
-								<img src="{{ asset('storage/'.$image_preview) }}" alt="Brand image" class="img-fluid" width="100">
+								<img src="{{ asset('img/brand/'.$image_preview) }}" alt="Brand image" class="img-fluid" width="100">
 							</div>
 							@endif
 							<div class="input-group mb-1">

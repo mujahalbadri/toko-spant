@@ -34,7 +34,7 @@
 			<div class="col-sm-6 col-md-3 mb-3">
 				<div class="card">
 					<div class="card-body text-center">
-						<img src="{{ asset('storage/'.$product->image) }}" alt="Product Image" class="img-fluid w-100">
+						<img src="{{ asset('img/product/'.$product->image) }}" alt="Product Image" class="img-fluid w-100">
 						<div class="row mt-2">
 							<div class="col-md-12">
 								<h5 class="font-weight-bold text-truncate">{{ $product->name }}</h5>

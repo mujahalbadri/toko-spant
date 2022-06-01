@@ -48,7 +48,7 @@
 										<span class="text-danger font-weight-bold">Tidak</span>
 										@endif
 									</td>
-									<td><img src="{{ asset('storage/'.$product->image) }}" alt="Product image" class="img-fluid"
+									<td><img src="{{ asset('img/product/'.$product->image) }}" alt="Product image" class="img-fluid"
 											width="80"></td>
 									<td style="max-width: 12em">
 										<button type="button" wire:click="edit({{ $product->id }})" class="btn btn-success mr-1 mb-1"
@@ -173,7 +173,7 @@
 							</div>
 							@if ($showEditModal)
 							<div class="my-3">
-								<img src="{{ asset('storage/'.$image_preview) }}" alt="Product image" class="img-fluid" width="100">
+								<img src="{{ asset('img/product/'.$image_preview) }}" alt="Product image" class="img-fluid" width="100">
 							</div>
 							@endif
 							<div class="input-group mb-1">
