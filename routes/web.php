@@ -27,3 +27,4 @@ Route::livewire('/history', 'history')->name('history');
 Route::livewire('/admin/dashboard', 'admin.dashboard')->layout('layouts.admin.admin-app')->name('admin.dashboard')->middleware('is_admin');
 Route::livewire('/admin/brand', 'admin.brand')->layout('layouts.admin.admin-app')->name('admin.brand')->middleware('is_admin');
 Route::livewire('/admin/product', 'admin.product')->layout('layouts.admin.admin-app')->name('admin.product')->middleware('is_admin');
+Route::livewire('/admin/order', 'admin.order')->layout('layouts.admin.admin-app')->name('admin.order')->middleware('is_admin');

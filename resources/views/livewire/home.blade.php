@@ -29,7 +29,7 @@
 	<section class="pilih-brand mt-5">
 		<h3 class="font-weight-bold">Pilih Brand</h3>
 		<div class="row mt-4">
-			@foreach ($brands as $brand)
+			@forelse ($brands as $brand)
 			<div class="col-6 col-md-3 mb-3">
 				<a href="{{ route('products.brand', $brand->id) }}">
 					<div class="">
@@ -41,7 +41,11 @@
 					</div>
 				</a>
 			</div>
-			@endforeach
+			@empty
+			<div class="my-5 self-center col-12">
+				<h5 class="text-center ">Brand Kosong</h5>
+			</div>
+			@endforelse
 		</div>
 	</section>
 	{{-- Brand End Section --}}
@@ -53,7 +57,7 @@
 				Semua</a>
 		</h3>
 		<div class="row mt-4">
-			@foreach ($products as $product)
+			@forelse ($products as $product)
 			<div class="col-6 col-md-3">
 				<div class="card mb-3">
 					<div class="card-body text-center">
@@ -72,7 +76,11 @@
 					</div>
 				</div>
 			</div>
-			@endforeach
+			@empty
+			<div class="my-5 my-5 self-center col-12">
+				<h5 class="text-center">Produk Kosong</h5>
+			</div>
+			@endforelse
 		</div>
 	</section>
 	{{-- Best Product End Section --}}

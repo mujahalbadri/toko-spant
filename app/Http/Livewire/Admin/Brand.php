@@ -58,7 +58,7 @@ class Brand extends Component
     {
         $this->validate([
             'name_brand' => 'required',
-            'image_brand' => 'required|image',
+            'image_brand' => 'nullable|sometimes|image',
         ]);
 
         $brand = ModelsBrand::find($this->brand_id);

@@ -150,5 +150,12 @@
 		window.addEventListener('closeModal', event=> {
 			 $('#formModal').modal('hide');
 		});
+
+		window.onload = function () {
+			$('input[type="file"]').change(function(e){
+        var fileName = e.target.files[0].name;
+        $('.custom-file-label').html(fileName);
+    	});
+		}
 	</script>
 </div>

@@ -15,7 +15,7 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('brand_id');
+            $table->foreignId('brand_id')->constrained()->onDelete('cascade')->onDelete('cascade');
             $table->string('name');
             $table->integer('price');
             $table->boolean('is_ready')->default(true);

@@ -43,8 +43,8 @@
 						@forelse ($order_details as $order_detail)
 						<tr>
 							<td class="text-center">{{ $loop->iteration }}</td>
-							<td><img src="{{ asset('storage/').$order_detail->product->image }}" alt="Product image" class="img-fluid"
-									width="200"></td>
+							<td><img src="{{ asset('storage')}}/{{ $order_detail->product->image }}" alt="Product image"
+									class="img-fluid" width="200"></td>
 							<td>{{ $order_detail->product->name }}</td>
 							<td class="text-center">{{ $order_detail->size }}</td>
 							<td class="text-center">{{ $order_detail->quantity }}</td>

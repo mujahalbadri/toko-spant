@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class BrandSeeder extends Seeder
 {

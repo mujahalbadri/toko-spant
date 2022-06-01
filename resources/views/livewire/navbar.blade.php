@@ -20,10 +20,11 @@
 						List Sepatu
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"">
-						@foreach ($brands as $brand)
+						@forelse ($brands as $brand)
 						<a class=" dropdown-item" href="{{ route('products.brand', $brand->id) }}">{{ $brand->name }}</a>
-						@endforeach
-
+						@empty
+						<a class=" dropdown-item" href="/">Tidak ada Brand</a>
+						@endforelse
 						<hr class="dropdown-divider">
 
 						<a class="dropdown-item" href="{{ route('products') }}">Semua Brand</a>

@@ -171,6 +171,11 @@
 							<div>
 								<label class="font-weight-bold">Gambar</label>
 							</div>
+							@if ($showEditModal)
+							<div class="my-3">
+								<img src="{{ asset('storage/'.$image_preview) }}" alt="Product image" class="img-fluid" width="100">
+							</div>
+							@endif
 							<div class="input-group mb-1">
 								<div class="custom-file">
 									<input type="file" class="custom-file-input @error('image_product') is-invalid @enderror"
@@ -227,5 +232,12 @@
 		window.addEventListener('closeModal', event=> {
 			 $('#formModal').modal('hide');
 		});
+
+		window.onload = function () {
+			$('input[type="file"]').change(function(e){
+        var fileName = e.target.files[0].name;
+        $('.custom-file-label').html(fileName);
+    	});
+		}
 	</script>
 </div>

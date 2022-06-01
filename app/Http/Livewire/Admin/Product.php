@@ -12,7 +12,7 @@ class Product extends Component
 {
     use WithFileUploads;
 
-    public $name_product, $brand_product, $price_product, $color_product, $is_ready, $description, $image_product;
+    public $name_product, $brand_product, $price_product, $color_product, $is_ready, $description, $image_product, $image_preview;
     public $showEditModal = false;
     public $product_id = '';
 
@@ -66,6 +66,7 @@ class Product extends Component
         $this->color_product = $product->color;
         $this->is_ready = $product->is_ready;
         $this->description = $product->description;
+        $this->image_preview = $product->image;
     }
 
     public function update()

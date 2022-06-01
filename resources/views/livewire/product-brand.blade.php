@@ -30,7 +30,7 @@
 
 	<section class="product mb-5">
 		<div class="row mt-3">
-			@foreach ($products as $product)
+			@forelse ($products as $product)
 			<div class="col-sm-6 col-md-3 mb-3">
 				<div class="card">
 					<div class="card-body text-center">
@@ -49,7 +49,11 @@
 					</div>
 				</div>
 			</div>
-			@endforeach
+			@empty
+			<div class="my-5 my-5 self-center col-12">
+				<h5 class="text-center">Produk Tidak Ditemukan</h5>
+			</div>
+			@endforelse
 		</div>
 
 		<div class="row">
