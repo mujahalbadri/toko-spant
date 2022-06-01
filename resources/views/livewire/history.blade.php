@@ -47,7 +47,7 @@
 							<td>
 								<?php $order_details = \App\Models\OrderDetail::where('order_id', $order->id)->get(); ?>
 								@foreach ($order_details as $order_detail)
-								<img src="{{ asset('img/product/')}}/{{ $order_detail->product->image }}" class="img-fluid" width="50">
+								<img src="{{ asset('storage/').$order_detail->product->image }}" class="img-fluid" width="50">
 								{{ $order_detail->product->name }}
 								<br>
 								@endforeach

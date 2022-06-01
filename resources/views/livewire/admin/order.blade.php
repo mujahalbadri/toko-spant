@@ -38,8 +38,7 @@
 									<td>
 										<?php $order_details = \App\Models\OrderDetail::where('order_id', $order->id)->get(); ?>
 										@foreach ($order_details as $order_detail)
-										<img src="{{ asset('img/product/')}}/{{ $order_detail->product->image }}" class="img-fluid"
-											width="50">
+										<img src="{{ asset('storage')}}/{{ $order_detail->product->image }}" class="img-fluid" width="50">
 										{{ $order_detail->product->name }}
 										<br>
 										@endforeach
@@ -142,7 +141,7 @@
 										@foreach ($show_order_details as $order_detail)
 										<tr>
 											<td class="text-center">{{ $loop->iteration }}</td>
-											<td><img src="{{ asset('img/product/')}}/{{ $order_detail->product->image }}" alt="Product image"
+											<td><img src="{{ asset('storage')}}/{{ $order_detail->product->image }}" alt="Product image"
 													class="img-fluid" width="150"></td>
 											<td>{{ $order_detail->product->name }}</td>
 											<td class="text-center">{{ $order_detail->size }}</td>
